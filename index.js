@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors({origin:true}));
 app.use(express.json());
-const PAYSTACK_SECRET = process.env.PAYSTACK_SECRET;
+   const PAYSTACK_SECRET = process.env.PAYSTACK_SECRET; // live key
 const BANKS = {"044":"Access Bank","011":"First Bank","058":"GTB","057":"Zenith","033":"UBA","032":"Union","035":"Wema","214":"FCMB","050":"Ecobank"};
 app.post('/resolve', async (req,res)=>{
 let code="044";
